@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/*NAVIGATIE*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li {
+    flex-grow: 1;
+    margin: 0 .1em;
+
+}
+
+
+a {
+    background-color: black;
+    display: block;
+    color: white;
+    padding: 1em 4vw;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.navbar > li:first-child > a {
+    color: black;
+    background-color: lightpink;
+}
+
+@media screen and (min-width:60em) {
+    header {
+        /* header blijft zichtbaar bij scrollen op device */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+/*NAVIGTIE*/
+/*  PORTFOLIO  */
+
+
+
+/*  Lijstje met portfolio items  */
+.grid_portfolio {
+    display: grid;
+    grid-gap: 0.5em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+@media screen and (min-width:24em) {
+    .grid_portfolio {
+        grid-template-columns: repeat( auto-fit, minmax(24em, 1fr) );
+    }
+}
+
+.grid_portfolio article img {
+    max-width: 20em;
+}
+
+article {
+    background-color: #ccc;
+    padding: .5rem;
+}
+
+
+article:first-child {
+    background-color: lightpink;
+    transition: .7s;
+}
+
+h2 {
+    word-break: break-all;
+}
+
+
+h2:first-child {
+    font-family: 'Marck Script', cursive;
+    margin: 0 0 1.6rem;
+}
+
+p {
+    font-weight: normal;
+
+}
+
+/*
+.OG1 {
+    width: 60%;
+    height: 40%;
+    width: 400px;
+    height: 300px;
+}
+*/
+
+
+.titel {
+    font-family: 'Marck Script', cursive;
+    margin-left: 0.5em;
+    font-size: 4em;
+    text-align: center;
+}
+/* PORTFOLIO  */
+    /* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT ------------------------------------------------------------------------------------------------ */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background:#cccccc ;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px; /* omzetten (geen pixel) */
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.contact-details {
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f; /* omzetten (geen pixel) */
+  }
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: #696969;
+  border-top: 4px solid; /* omzetten (geen pixel) */
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT ------------------------------------------------------------------------------------------------ */
