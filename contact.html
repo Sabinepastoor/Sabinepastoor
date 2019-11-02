@@ -23,41 +23,43 @@
 </header>
 
 <body>
-<!--BRON VOOR CONTACT FORMULIER https://codepen.io/dfitzy/pen/VepqMq-->
-<div id="container">
-  <h1>Neem contact op!</h1>
-  <div class="underline"></div>
- <form action="#" method="post" id="contact_form" autocomplete="off">
-    <fieldset class="name">
-      <label for="Uw Naam"></label>
-      <input type="text" placeholder="Uw voornaam" name="name" id="name_input" required>
-    </fieldset>
-    <fieldset class="email">
-      <label for="email"></label>
-      <input type="email" placeholder="Uw E-mailadres" name="email" id="email_input" required>
-    </fieldset>
-    <fieldset class="telephone">
-      <label for="name"></label>
-      <input type="text" placeholder="Uw telefoon nr." name="telephone" id="telephone_input" required>
-    </fieldset>
-    <fieldset class="subject">
-      <label for="subject"></label>
-      <select placeholder="Subject line" name="subject" id="subject_input" required>
-        <option>Onderwerp</option>
-        <option>Het lijkt mij leuk om samen te werken</option>
-        <option>Ik wil een vraag stellen</option>
-        <option>Ik wil een voorstel doen</option>
-      </select>
-    </fieldset>
-    <fieldset class="message">
-      <label for="message"></label>
-      <textarea name="message" placeholder="Uw bericht" id="message_input" cols="30" rows="5" required></textarea>
-    </fieldset>
-    <fieldset class="submit">
-      <input type="submit" value="Verzenden" id="form_button" />
-    </fieldset>
-  </form><!-- // End form -->
-</div><!-- // End #container -->
+    <!--BRON VOOR CONTACT FORMULIER https://codepen.io/dfitzy/pen/VepqMq-->
+    <div id="container">
+        <h1>Neem contact op!</h1>
+        <div class="underline"></div>
+        <form action="#" method="post" id="contact_form" autocomplete="off">
+            <legend>Persoonlijke informatie:</legend>
+            <fieldset class="name">
+                <label for="Uw Naam"></label>
+                <input type="text" placeholder="Uw voornaam" name="name" id="name_input" required>
+            </fieldset>
+            <fieldset class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="Uw E-mailadres" name="email" id="email_input" required>
+            </fieldset>
+            <fieldset class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="Uw telefoon nr." name="telephone" id="telephone_input" required>
+            </fieldset>
+            <legend>Uw bericht:</legend>
+            <fieldset class="subject">
+                <label for="subject"></label>
+                <select placeholder="Subject line" name="subject" id="subject_input" required>
+                    <option>Onderwerp</option>
+                    <option>Het lijkt mij leuk om samen te werken</option>
+                    <option>Ik wil een vraag stellen</option>
+                    <option>Ik wil een voorstel doen</option>
+                </select>
+            </fieldset>
+            <fieldset class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="Uw bericht" id="message_input" cols="30" rows="5" required></textarea>
+            </fieldset>
+            <fieldset class="submit">
+                <input type="submit" value="Verzenden" id="form_button" />
+            </fieldset>
+        </form><!-- // End form -->
+    </div><!-- // End #container -->
 </body>
 
 </html>

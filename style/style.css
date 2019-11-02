@@ -192,7 +192,8 @@ button {
 }
 
 button,
-input,textarea {
+input,
+textarea {
     color: #5A5A5A;
     font: inherit;
     margin: 0;
@@ -238,7 +239,8 @@ form {
     width: 45%;
 }
 
-input[type='text'],[type='email'],
+input[type='text'],
+[type='email'],
 textarea {
     background: none;
     border: none;
@@ -251,7 +253,7 @@ textarea {
     padding: 0 0 0.875em 0;
     width: 100%;
     box-sizing: border-box;
-     transition: all 0.3s;
+    transition: all 0.3s;
 
 }
 
@@ -259,19 +261,23 @@ input[type='text']:focus,
 [type='email']:focus,
 textarea:focus {
     background-color: lightpink;
-    }
+}
 
 .name {
     float: left;
     width: 45%;
 }
 
-.subject, .telephone, .message, .submit {
+.subject,
+.telephone,
+.message,
+.submit {
     width: 100%;
 }
 
-.telephone {
-    width: 100%;
+legend {
+    text-transform: uppercase;
+    border:0.2em dotted lightpink;
 }
 
 textarea {
