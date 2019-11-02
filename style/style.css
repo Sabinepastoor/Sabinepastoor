@@ -266,7 +266,7 @@ textarea:focus {
     width: 45%;
 }
 
-.subject {
+.subject, .telephone, .message, .submit {
     width: 100%;
 }
 
