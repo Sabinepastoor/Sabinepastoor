@@ -7,3 +7,4 @@ function change(){
     var image = document.getElementById('Collage');
     image.src = "img/Layout-100.jpg"
 }
+
