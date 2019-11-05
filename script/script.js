@@ -3,9 +3,18 @@
 /*eslint-env browser*/
 
 /*eslint 'no-console': 0*/
+var secImg = false;
+
 function change(){
     var image = document.getElementById('Collage');
-    image.src = "img/Layout-100.jpg"
+
+    secImg = !secImg;
+    // ! betekent omgekeerde van wat het is
+
+    if(secImg)
+        image.src = "img/Layout-100.jpg";
+    else
+        image.src = "img/Collage-Art-Deco.jpg";
 }
 // tutorial https://www.youtube.com/watch?v=hIRjlG-gbuI
 function insertText(){
