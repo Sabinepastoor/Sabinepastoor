@@ -1,3 +1,4 @@
+/*START CSS*/
 * {
     box-sizing: border-box;
     /*    border-box vertelt de browser om rekening te houden met elke border en padding in de waarden die je opgeeft voor de breedte en hoogte van een element.*/
@@ -135,6 +136,27 @@ a {
 
 main article img {
     max-width: 20em;
+
+}
+
+.overlay {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);/* Zwarte transparant */
+    color: #fff;
+    width: 100%;
+    transition: .5s ease-out;
+    opacity: 0;
+    color: white;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.75em;
+    padding: 1em;
+    text-align: center;
+
+}
+
+article:first-child:hover .overlay {
+    opacity: 1;
 }
 
 article {
@@ -147,6 +169,7 @@ article:first-child {
     background-color: lightpink;
     transition: .7s;
 }
+
 
 h2 {
     font-family: 'Marck Script', cursive;
@@ -196,7 +219,9 @@ h2 {
 
 /*-----------------------------------------------------------------------------------------------------CONTACT FORMULIER-------------------------- -------------------------------------------------------*/
 /*BRON FORMULIER https://codepen.io/dfitzy/pen/VepqMq*/
-button,input,textarea {
+button,
+input,
+textarea {
     color: #5A5A5A;
     margin: 0;
 }
@@ -272,7 +297,7 @@ textarea:focus {
 legend {
     text-transform: uppercase;
     border: 0.2em dotted lightpink;
-    width: 35%;
+    width: 100%;
 }
 
 textarea {
@@ -288,7 +313,7 @@ textarea {
     color: #474544;
     cursor: pointer;
     display: inline-block;
-/* met display: inline-block worden de marges / paddings gerespecteerd, maar met display: inline alleen niet.   */
+    /* met display: inline-block worden de marges / paddings gerespecteerd, maar met display: inline alleen niet.   */
     font-size: 0.8em;
     font-weight: bold;
     padding: 1.250em 2.188em;
@@ -301,6 +326,25 @@ textarea {
     background: lightpink;
     color: #FFF;
 }
+
+#Toevoegen {
+    background: none;
+    border: solid 0.125em #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1.250em 2.188em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#Toevoegen:hover {
+    background: lightpink;
+    color: #FFF;
+}
+
 
 @media screen and (max-width: 48em) {
     #container {
@@ -399,4 +443,5 @@ img {
     }
 }
 
-/* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT ------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT ------------------------------------------------------------------------------ */
+/*EINDE CSS*/

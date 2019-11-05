@@ -19,9 +19,11 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <!-- EINDE NAVIGATIE  -->
 </header>
 
 <body>
+    <!-- START FORMULIER  -->
     <!--BRON VOOR CONTACT FORMULIER https://codepen.io/dfitzy/pen/VepqMq-->
     <div id="container">
         <h1>Neem contact op!</h1>
@@ -45,10 +47,13 @@
                 <label for="subject"></label>
                 <select placeholder="Subjects" name="subject" id="subject_input" required>
                     <option>Onderwerp</option>
-                    <option>Het lijkt mij leuk om samen te werken</option>
-                    <option>Ik wil een vraag stellen</option>
-                    <option>Ik wil een voorstel doen</option>
+                    <option value="Samenwerken">Het lijkt mij leuk om samen te werken</option>
+                    <option value="Vraag">Ik wil een vraag stellen</option>
+                    <option value="Voorstel">Ik wil een voorstel doen</option>
                 </select>
+                <p>Voeg een nieuw onderwerp toe als uw onderwerp er niet bij staat</p>
+                <input type="text" id="newValue">
+                <button id="Toevoegen" onclick="insertText();">Toevoegen</button>
             </fieldset>
             <fieldset class="message">
                 <label for="message"></label>
@@ -58,8 +63,11 @@
                 <input type="submit" value="Verzenden" id="form_button">
             </fieldset>
 
-        </form><!-- // End form -->
-    </div><!-- // End #container -->
+        </form>
+        <!-- EINDE FORMULIER  -->
+    </div>
+    <!-- EINDE CONTAINER   -->
+    <script src="script/script.js"></script>
 </body>
 
 </html>
