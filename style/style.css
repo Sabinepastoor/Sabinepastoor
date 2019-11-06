@@ -124,6 +124,10 @@ a {
 
 .portfolio h1 {
     font-variant: small-caps;
+    font-family: 'Marck Script', cursive;
+    margin-left: 0.5em;
+    font-size: 4em;
+    text-align: center;
 }
 
 @media screen and (min-width:24em) {
@@ -141,8 +145,10 @@ main article img {
 
 .overlay {
     position: relative;
+    /*Het element is gepositioneerd ten opzichte van zijn normale positie*/
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);/* Zwarte transparant */
+    background: rgba(0, 0, 0, 0.5);
+    /* Zwarte transparante achtergrond */
     color: #fff;
     width: 100%;
     transition: .5s ease-out;
@@ -175,13 +181,6 @@ h2 {
     font-family: 'Marck Script', cursive;
     margin: 0 0 1.6rem;
 
-}
-
-.titel {
-    font-family: 'Marck Script', cursive;
-    margin-left: 0.5em;
-    font-size: 4em;
-    text-align: center;
 }
 
 #link {
@@ -217,7 +216,7 @@ h2 {
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DETAIL PAGINA xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-/*-----------------------------------------------------------------------------------------------------CONTACT FORMULIER-------------------------- -------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------CONTACT FORMULIER-------------------------- ----------------------------------------------------*/
 /*BRON FORMULIER https://codepen.io/dfitzy/pen/VepqMq*/
 button,
 input,
@@ -257,6 +256,11 @@ form {
     width: 45%;
 }
 
+.name {
+    float: left;
+    width: 45%;
+}
+
 input[type='text'],
 [type='email'],
 textarea {
@@ -264,6 +268,7 @@ textarea {
     border: none;
     border-bottom: solid 0.125em #474544;
     /* Lijn onder de tekst  */
+
     color: #474544;
     font-size: 1em;
     font-weight: 400;
@@ -279,12 +284,6 @@ input[type='text']:focus,
 [type='email']:focus,
 textarea:focus {
     background-color: lightpink;
-}
-
-
-.name {
-    float: left;
-    width: 45%;
 }
 
 .subject,
@@ -358,13 +357,18 @@ textarea {
         font-size: 1.6em;
     }
 
+    /* Tekst wordt iets kleiner */
+
     .underline {
         width: 4.250em;
     }
 
+    /* lijn wordt iets minder breed */
     #form_button {
         padding: 0.938em 1.563em;
     }
+
+    /* Button krijgt iets minder padding */
 }
 
 @media screen and (max-width: 26.250em) {
@@ -383,7 +387,8 @@ textarea {
     }
 }
 
-/* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT -------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------EINDE CONTACT FORMULIER-------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------FOOTER/CONTACT [index] -------------------------------------------------------------------------------------*/
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -392,6 +397,7 @@ textarea {
     text-align: center;
     width: 100%;
     height: 80vh;
+    /* VH = Ten opzichte van 1% van de hoogte van de viewport */
     padding: 0 2rem;
     background: #cccccc;
 
@@ -405,6 +411,7 @@ textarea {
     max-width: 61.250em;
     margin-top: 4rem;
     flex-wrap: wrap;
+    /* richting wordt bepaald door flex-richting */
 }
 
 .contact-details {
