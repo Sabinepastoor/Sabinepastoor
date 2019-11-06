@@ -6,6 +6,7 @@
 var secImg = false;
 
 function change(){
+    // functie wordt aangeroepen in de HTML
     var image = document.getElementById('Collage');
 
     secImg = !secImg;
