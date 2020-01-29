@@ -1,0 +1,455 @@
+/*START CSS*/
+* {
+    box-sizing: border-box;
+    /*    border-box vertelt de browser om rekening te houden met elke border en padding in de waarden die je opgeeft voor de breedte en hoogte van een element.*/
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* ------------------------------------------------------------------- NAVIGATIE----------------------------------------------------------------------------------------------*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li {
+    flex-grow: 1;
+    /*  hoeveel het item groeit ten opzichte van de rest van de flexibele items in dezelfde container  */
+    margin: 0 .1em;
+
+}
+
+
+a {
+    background-color: black;
+    display: block;
+    /* een element als een blokelement. Het begint op een nieuwe regel en neemt de hele breedte in beslag*/
+    color: white;
+    padding: 1em 4vw;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.navbar > li:first-child > a {
+    color: black;
+    background-color: lightpink;
+}
+
+@media screen and (min-width:60em) {
+    header {
+        /* header blijft zichtbaar bij scrollen op device */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        /* De stapelvolgorde van een Element bepaal je met z-index*/
+    }
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx NAVIGTIE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* ----------------------------------------------WIE BEN IK HOME -------------------------------------------------------------------------------------------- */
+
+.strong-text {
+    font-weight: 700;
+    font-size: 2em;
+    display: block;
+    writing-mode: vertical-rl;
+    /* bron voor writing mode: https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode */
+}
+
+.about-row {
+    background-color: #ECF0F1;
+    width: 80%;
+    margin: 6em auto 0 auto;
+    /* auto: Standaardwaarde. De browser berekent de breedte   */
+}
+
+.about-section {
+    width: 100%;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+    background-color: #ECF0F1;
+}
+
+.about-text {
+    font-size: 1.5em;
+    text-align: justify;
+    /* Rekt de lijnen uit zodat elke lijn even breed is   */
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.about-pic {
+    margin-top: 0.500em;
+    margin-bottom: 0.500em;
+    width: 18.750em;
+    box-shadow: 0em 0em 0.5em 0.2em rgba(245, 180, 192, 0.68);
+
+}
+
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx WIE BEN IK HOME xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* -----------------------------------------------------------------------------PORTFOLIO ----------------------------------------------------------------------------------------------- */
+
+
+
+/*  Lijstje met portfolio items  */
+.portfolio main {
+    display: grid;
+    grid-gap: 0.5em;
+    /* Ruimte tussen de blokken*/
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+.Sabine {
+    max-width: 50%;
+}
+
+
+.Titel {
+    font-variant: small-caps;
+    font-family: 'Marck Script', cursive;
+    margin-left: 0.5em;
+    font-size: 4em;
+    text-align: center;
+}
+
+@media screen and (min-width:24em) {
+    .portfolio main {
+        grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+        /* Zorgt er voor dat je meerdere kolommen naast elkaar krijgt die altijd passend zijn tot een bepaald formaat, in dit geval 24em
+        een minimale breedte voor de kolommen opgeven - 24em. Met de functie repeat () kunt je kolommen zo vaak herhalen als nodig is. 1fr = zodat ze worden uitgebreid en evenveel extra ruimte delen wanneer deze beschikbaar is.*/
+    }
+}
+
+main article img {
+    max-width: 20em;
+
+}
+
+.overlay {
+    position: relative;
+    /*Het element is gepositioneerd ten opzichte van zijn normale positie*/
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Zwarte transparante achtergrond */
+    color: #fff;
+    width: 100%;
+    transition: .5s ease-out;
+    opacity: 0;
+    color: white;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.75em;
+    padding: 1em;
+    text-align: center;
+
+}
+
+article:first-child:hover .overlay {
+    opacity: 1;
+}
+
+article {
+    background-color: #ccc;
+    padding: .5rem;
+}
+
+
+article:first-child {
+    background-color: lightpink;
+    transition: .7s;
+}
+
+
+h2 {
+    font-family: 'Marck Script', cursive;
+    margin: 0 0 1.6rem;
+
+}
+
+#link {
+    background-color: transparent;
+    color: black;
+    /* zodat de tekst zwart is en blijft   */
+    text-align: left;
+    padding: 0;
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PORTFOLIO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/*--------------------------------------------------------------------------- DETAIL PAGINA --------------------------------------------------------------------------------------------*/
+#artDeco {
+    max-width: 43.750em;
+    margin: 0 auto;
+    padding: 1.250em;
+}
+
+#artDeco p {
+    font-size: 1.125em;
+    color: rgba(0, 0, 0, .84);
+    line-height: 1.60;
+    margin: 1.875em auto;
+}
+
+#artDeco img {
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DETAIL PAGINA xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/*-----------------------------------------------------------------------------------------------------CONTACT FORMULIER-------------------------- ----------------------------------------------------*/
+/*BRON FORMULIER https://codepen.io/dfitzy/pen/VepqMq*/
+button,
+input,
+textarea {
+    color: #5A5A5A;
+    margin: 0;
+}
+
+
+#container {
+    border: dotted 0.3em #474544;
+    max-width: 48em;
+    margin: 3em auto;
+    position: relative;
+}
+
+form {
+    padding: 2.3em;
+    margin: 3.125em 0;
+}
+
+#container h1 {
+    color: lightpink;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.underline {
+    border-bottom: solid 0.125em #474544;
+    margin: -0.512em auto;
+    width: 5em;
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+input[type='text'],
+[type='email'],
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 0.125em #474544;
+    /* Lijn onder de tekst  */
+
+    color: #474544;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.063em;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    width: 100%;
+    transition: all 0.3s;
+
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    background-color: lightpink;
+}
+
+.subject,
+.telephone,
+.message,
+.submit {
+    width: 100%;
+}
+
+legend {
+    text-transform: uppercase;
+    border: 0.2em dotted lightpink;
+    width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 9.375em;
+    width: 100%;
+}
+
+
+#form_button {
+    background: none;
+    border: solid 0.125em #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    /* met display: inline-block worden de marges / paddings gerespecteerd, maar met display: inline alleen niet.   */
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1.250em 2.188em;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+}
+
+#form_button:hover {
+    background: lightpink;
+    color: #FFF;
+}
+
+#Toevoegen {
+    background: none;
+    border: solid 0.125em #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1.250em 2.188em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#Toevoegen:hover {
+    background: lightpink;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 48em) {
+    #container {
+        margin: 1em auto;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    #container h1 {
+        font-size: 1.6em;
+    }
+
+    /* Tekst wordt iets kleiner */
+
+    .underline {
+        width: 4.250em;
+    }
+
+    /* lijn wordt iets minder breed */
+    #form_button {
+        padding: 0.938em 1.563em;
+    }
+
+    /* Button krijgt iets minder padding */
+}
+
+@media screen and (max-width: 26.250em) {
+    #container h1 {
+        font-size: 1.125em;
+    }
+
+    .underline {
+        width: 3.313em;
+    }
+
+    input[type='text'],
+    [type='email'],
+    textarea {
+        font-size: 0.875em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------EINDE CONTACT FORMULIER-------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------FOOTER/CONTACT [index] -------------------------------------------------------------------------------------*/
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    /* VH = Ten opzichte van 1% van de hoogte van de viewport */
+    padding: 0 2rem;
+    background: #cccccc;
+
+}
+
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 61.250em;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    /* richting wordt bepaald door flex-richting */
+}
+
+.contact-details {
+    font-size: 1.4rem;
+    text-shadow: 0.125em 0.125em 0.063em #1f1f1f;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+
+}
+
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #696969;
+    border-top: 0.250em solid;
+
+}
+
+footer > p {
+    margin: 2rem;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+@media (max-width: 28.75em) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------- FOOTER/CONTACT ------------------------------------------------------------------------------ */
+/*EINDE CSS*/

@@ -9,43 +9,45 @@
     <meta author="Sabine pastoor">
     <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
 </head>
-<header>
-    <!-- NAVIGATIE  -->
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">Sabine Pastoor | Portfolio</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <!-- EINDE NAVIGATIE  -->
-</header>
 
 <body>
+    <header>
+        <!-- NAVIGATIE  -->
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Sabine Pastoor | Portfolio</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- EINDE NAVIGATIE  -->
+    </header>
+
+
     <!-- START FORMULIER  -->
     <!--BRON VOOR CONTACT FORMULIER https://codepen.io/dfitzy/pen/VepqMq-->
+    <main id="container">
 
-    <div id="container">
         <h1>Neem contact op!</h1>
         <div class="underline"></div>
         <form action="#" method="post" id="contact_form" autocomplete="off">
             <legend>Persoonlijke informatie:</legend>
             <fieldset class="name">
-                <label for="Uw Naam"></label>
+                <label aria-hidden="true" for="name_input">Uw naam</label>
                 <input type="text" placeholder="Uw voornaam" name="name" id="name_input" required>
             </fieldset>
             <fieldset class="email">
-                <label for="email"></label>
+                <label aria-hidden="true" for="email_input">Uw E-mailadres</label>
                 <input type="email" placeholder="Uw E-mailadres" name="email" id="email_input" required>
             </fieldset>
             <fieldset class="telephone">
-                <label for="name"></label>
-                <input type="text" placeholder="Uw telefoon nr." name="telephone" id="telephone_input" required>
+                <label aria-hidden="true" for="telephone_input">Uw Telefoon Nr.</label>
+                <input type="text" placeholder="Zet hier uw telefoon nr. neer met (06)" name="telephone" id="telephone_input" required>
             </fieldset>
             <legend>Uw bericht:</legend>
             <fieldset class="subject">
-                <label for="subject"></label>
+                <label aria-hidden="true" for="subject_input">Een onderwerp</label>
                 <select placeholder="Subjects" name="subject" id="subject_input" required>
                     <option>Onderwerp</option>
                     <option value="Samenwerken">Het lijkt mij leuk om samen te werken</option>
@@ -57,7 +59,7 @@
                 <button id="Toevoegen" onclick="insertText();">Toevoegen</button>
             </fieldset>
             <fieldset class="message">
-                <label for="message"></label>
+                <label aria-hidden="true" for="message_input">Laat een bericht achter</label>
                 <textarea name="message" placeholder="Uw bericht" id="message_input" cols="30" rows="5" required></textarea>
             </fieldset>
             <fieldset class="submit">
@@ -65,8 +67,9 @@
             </fieldset>
         </form>
         <!-- EINDE FORMULIER  -->
-    </div>
+    </main>
     <!-- EINDE CONTAINER   -->
+
     <script src="script/script.js"></script>
 </body>
 
