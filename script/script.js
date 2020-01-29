@@ -16,7 +16,7 @@ function change1() {
     // ! betekent omgekeerde van wat het is
 
     if (secImg)
-        image.src = "img/Ontwerphandleiding.png";
+        image.src = "img/ontwerphandleiding.png";
     else
         image.src = "img/UX-Storyboard NPD-8.png";
 }
